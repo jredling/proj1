@@ -64,6 +64,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\FaultData.cs" />
+    <Compile Include="Models\Receipt.cs" />
+    <Compile Include="Models\SSek.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

@@ -7,5 +7,8 @@ namespace SsekRoute.Models
 {
     public class Receipt
     {
+        public string ResponseCode { get; set; }
+        public string ResponseMEssage { get; set; }
+        public string RequestSignatureValue { get; set; }
     }
 }

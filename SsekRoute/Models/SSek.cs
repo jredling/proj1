@@ -7,5 +7,8 @@ namespace SsekRoute.Models
 {
     public class SSek
     {
+        public string SenderId { get; set; }
+        public string ReceiverId { get; set; }
+        public string MyProperty { get; set; }
     }
 }
