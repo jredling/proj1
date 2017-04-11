@@ -12,9 +12,14 @@ namespace Api.Receiver.Controllers
     public class SsekController : ApiController
     {
         // POST api/values
-        public IHttpActionResult Post([FromBody]ParamsObject paramsObject)
+        //public IHttpActionResult Post([FromBody]ParamsObject paramsObject)
+        //{
+        //    return Ok(paramsObject);
+        //}
+        public IHttpActionResult Post([FromBody]string data)
         {
-            return Ok(paramsObject);
+
+            return Ok(data);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Api.Receiver.Formatter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,7 @@ namespace Api.Receiver
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             var xml = GlobalConfiguration.Configuration.Formatters.XmlFormatter;
             xml.UseXmlSerializer = true;
+            GlobalConfiguration.Configuration.Formatters.Insert(0, new TextMediaTypeFormatter());
         }
     }
 }
