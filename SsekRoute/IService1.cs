@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using SsekRoute.Domain.Models;
 
 namespace SsekRoute
 {
@@ -17,8 +18,13 @@ namespace SsekRoute
         string GetData(int value);
 
         [OperationContract]
+         [WebInvoke(Method = "Post", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml)]
+        Transaction PostData();
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        
         // TODO: Add your service operations here
     }
 
@@ -31,12 +37,8 @@ namespace SsekRoute
         string stringValue = "Hello ";
 
         [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
+        public FaultData FaultData { get; set; }
+        
         [DataMember]
         public string StringValue
         {
